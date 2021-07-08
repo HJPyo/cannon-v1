@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="cannon.css">
+
+<div class="wrapper">
+  <button class="st-btn" onclick="launch();">발사</button>
+
+  <div id="main"></div>
+
+  <script>
+    var getnum = prompt("학생수를 입력해 주십시오.");
+    while (getnum != getnum * 1 || getnum > 999 || getnum < 2) {
+      getnum = prompt("3~999 의 값을 입력하여 주십시오.");
+    }
+    getnum = Number(getnum);
+  
+    var arr = [];
+  
+    for (var i = 1; i <= getnum; i++) {
+      arr.push(i);
+    }
+  
+    for (var i = 1; i <= getnum * 10; i++) {
+      var idx = Math.floor(Math.random() * (getnum - 1));
+      var tmp = arr[idx];
+      arr[idx] = arr[idx + 1];
+      arr[idx + 1] = tmp;
+    }
+  
+    var cnt = 0;
+
+    function launch(){
+      if(cnt < getnum) {
+        console.log(arr[cnt]);
+        alert(arr[cnt]);
+      } else {
+        alert("모든 공을 발사하였습니다. 재시작 하시려면 F5를 눌러주십시오.");
+      }
+      cnt++;
+    }
+  </script>
+</div>
+
+
