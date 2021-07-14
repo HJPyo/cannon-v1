@@ -24,18 +24,23 @@
     }
   
     var cnt = 0;
+    var node = [];
+    var text;
 
     function launch(){
       if(cnt < getnum) {
         console.log(arr[cnt]);
-        var node = document.createElement("h6");
-        var text = document.createTextNode(String(arr[cnt]));
-        node.appendChild(text);
-        document.getElementById("sky").appendChild(node);
+        node.push(document.createElement("h6")); 
+        text = document.createTextNode(String(arr[cnt]));
+        node[cnt].appendChild(text);
+        document.getElementById("sky").appendChild(node[cnt]);
+        if(cnt > 0){
+          node[cnt-1].remove();
+        }
+        cnt++;
       } else {
         alert("모든 공을 발사하였습니다. 재시작 하시려면 F5를 눌러주십시오.");
       }
-      cnt++;
     }
   </script>
 </div>
