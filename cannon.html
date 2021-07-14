@@ -18,11 +18,11 @@
       arr.push(i);
     }
   
-    for (var i = 1; i <= getnum * 10; i++) {
+    for (var i = 1; i <= getnum; i++) {
       var idx = Math.floor(Math.random() * (getnum - 1));
       var tmp = arr[idx];
-      arr[idx] = arr[idx + 1];
-      arr[idx + 1] = tmp;
+      arr[idx] = arr[i - 1];
+      arr[i - 1] = tmp;
     }
   
     var cnt = 0;
