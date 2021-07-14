@@ -1,9 +1,7 @@
 <link rel="stylesheet" href="cannon.css">
 
-<div class="wrapper">
+<div id="sky" class="wrapper">
   <button class="st-btn" onclick="launch();">발사</button>
-
-  <div id="main"></div>
 
   <script>
     var getnum = prompt("학생수를 입력해 주십시오.");
@@ -30,7 +28,10 @@
     function launch(){
       if(cnt < getnum) {
         console.log(arr[cnt]);
-        alert(arr[cnt]);
+        var node = document.createElement("h6");
+        var text = document.createTextNode(String(arr[cnt]));
+        node.appendChild(text);
+        document.getElementById("sky").appendChild(node);
       } else {
         alert("모든 공을 발사하였습니다. 재시작 하시려면 F5를 눌러주십시오.");
       }
