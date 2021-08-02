@@ -20,6 +20,7 @@ for (var i = 1; i <= getnum; i++) {
 var cnt = 0;
 var node = [];
 var text, id;
+var txt, num;
 
 var mystyle = "position: absolute; left: 50%; top: 30%; transform: translateX(-50%) translateY(-50%); height: 30rem; width: 30rem; background: linear-gradient(135deg, rgb(59, 255, 59), rgb(24, 122, 24)); border-radius: 100%; text-align: center; vertical-align: 50%; color: white; font-size: 156px; padding: 0 auto; animation: boooom; animation-duration: .75s;";
 
@@ -30,6 +31,15 @@ function launch() {
 		node[cnt].style = mystyle;
 		node[cnt].appendChild(text);
 		document.getElementById("sky").appendChild(node[cnt]);
+
+		txt = document.createTextNode('[' + String(cnt + 1) + '] : ' + String(arr[cnt]));
+		num = document.createElement('div');
+		num.appendChild(txt);
+		document.getElementById('list').appendChild(num);
+
+		let objDiv = document.getElementById("list");
+		objDiv.scrollTop = objDiv.scrollHeight;
+
 		if (cnt > 0) {
 			node[cnt - 1].remove();
 		}

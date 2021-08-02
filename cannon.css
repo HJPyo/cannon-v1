@@ -1,10 +1,59 @@
+body{
+    background-image: linear-gradient(180deg, rgb(80, 120, 210), rgb(255, 255, 255));
+    overflow: hidden;
+}
+
 .wrapper {
     height: 100%;
     width: 100%;
-    background-image: url('./daepo.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.lastnum{
+    position: absolute;
+    right: 5rem;
+    bottom: 5rem;
+    height: 25rem;
+    width: 30vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: black 2px solid;
+    border-radius: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.lasttxt{
+    position: absolute;
+    left: 0;
+    bottom: .5rem;
+    height: 21rem;
+    width: 30vh;
+    overflow-y: scroll;
+}
+
+.lasttxt::-webkit-scrollbar {
+    display: none;
+  }
+
+.cannon{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 256px;
+    width: 256px;
+}
+
+.mt1{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.mt2{
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .st-btn{
@@ -17,6 +66,12 @@
     width: 10rem;
     border-radius: 100%;
     font-size: 3rem;
+}
+
+@media (max-width: 1080px) {
+    .lastnum{
+        bottom: -100rem;
+    }
 }
 
 @keyframes boooom{
