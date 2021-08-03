@@ -22,7 +22,7 @@ var node = [];
 var text, id;
 var txt, num;
 
-var mystyle = "position: absolute; left: 50%; top: 30%; transform: translateX(-50%) translateY(-50%); height: 30rem; width: 30rem; background: linear-gradient(135deg, rgb(59, 255, 59), rgb(24, 122, 24)); border-radius: 100%; text-align: center; vertical-align: 50%; color: white; font-size: 156px; padding: 0 auto; animation: boooom; animation-duration: .75s;";
+var mystyle = "position: absolute; left: 50%; top: 30%; transform: translateX(-50%) translateY(-50%); height: 30rem; width: 30rem; background: linear-gradient(135deg, rgb(59, 255, 59), rgb(24, 122, 24)); border-radius: 100%; text-align: center; vertical-align: middle; color: white; font-size: 15rem; animation: boooom; animation-duration: .75s;";
 
 function launch() {
 	if (cnt < getnum) {
