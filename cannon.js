@@ -48,3 +48,7 @@ function launch() {
 		alert("모든 공을 발사하였습니다. 재시작 하시려면 F5를 눌러주십시오.");
 	}
 }
+
+function reload(){
+	window.location.reload();
+}

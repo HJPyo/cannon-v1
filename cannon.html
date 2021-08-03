@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>중복없는 대포뽑기~</title>
-    <meta charset="utf-8">
 
-    <link rel="icon" href="./src/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="cannon.css">
-    <script src="./cannon.js"></script>
-  </head>
-  <body id="sky" style="height: 100vh; width: 100vh;">
-      <img src="./src/1.png" alt="mt1" class="mt1">
-      <img src="./src/2.png" alt="mt2" class="mt2">
-      <img src="./src/6d64860e183b1279.png" alt="cannon" class="cannon">
-      <div class="lastnum">
-        최근 뽑은 번호
-        <div id="list" class="lasttxt"></div>
-      </div>
-      <button class="st-btn" onclick="launch();">발사</button>
-  </body>
+<head>
+  <title>중복없는 대포뽑기~</title>
+  <meta charset="utf-8">
+
+  <link rel="icon" href="./src/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="cannon.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+  <script src="./cannon.js"></script>
+</head>
+
+<body id="sky" style="height: 100vh; width: 100vh; font-family: 'Do Hyeon', sans-serif;">
+  <img src="./src/1.png" alt="mt1" class="mt1">
+  <img src="./src/2.png" alt="mt2" class="mt2">
+  <img src="./src/6d64860e183b1279.png" alt="cannon" class="cannon">
+  <div class="lastnum">
+    최근 뽑은 번호
+    <div id="list" class="lasttxt"></div>
+  </div>
+  <button style="font-family: 'Do Hyeon', sans-serif;" class="st-btn" onclick="launch();">발사</button>
+
+  <a onclick="reload()" class="reload">다시</a>
+</body>
+
 </html>
