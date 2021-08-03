@@ -2,12 +2,7 @@ body{
     background-image: linear-gradient(180deg, rgb(80, 120, 210), rgb(255, 255, 255));
     overflow: hidden;
     background-repeat: no-repeat;
-}
-
-.wrapper {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+    margin: 0 auto;
 }
 
 .lastnum{
